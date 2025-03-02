@@ -1,0 +1,292 @@
+{
+  "products": [
+    {
+      "sku": "PROD-001",
+      "name": "Smartphone X200",
+      "description": "Un smartphone de última generación con cámara de 108MP y pantalla AMOLED.",
+      "image": "https://example.com/images/smartphone-x200.jpg",
+      "category": {
+        "id": "CAT-001",
+        "name": "Smartphones"
+      },
+      "brand": "TechBrand",
+      "price": 999.99,
+      "stock": 50,
+      "specifications": [
+        { "key": "Pantalla", "value": "6.5 pulgadas AMOLED" },
+        { "key": "Cámara", "value": "108MP + 12MP + 5MP" },
+        { "key": "Batería", "value": "4500mAh" }
+      ]
+    },
+    {
+      "sku": "PROD-002",
+      "name": "Laptop UltraBook 14",
+      "description": "Laptop ultradelgada con procesador Intel i7 y 16GB RAM.",
+      "image": "https://example.com/images/laptop-ultrabook14.jpg",
+      "category": {
+        "id": "CAT-002",
+        "name": "Laptops"
+      },
+      "brand": "UltraTech",
+      "price": 1299.99,
+      "stock": 30,
+      "specifications": [
+        { "key": "Procesador", "value": "Intel Core i7" },
+        { "key": "RAM", "value": "16GB" },
+        { "key": "Almacenamiento", "value": "512GB SSD" }
+      ]
+    },
+    {
+      "sku": "PROD-003",
+      "name": "Auriculares Inalámbricos SoundMax",
+      "description": "Auriculares con cancelación de ruido y hasta 30 horas de autonomía.",
+      "image": "https://example.com/images/auriculares-soundmax.jpg",
+      "category": {
+        "id": "CAT-003",
+        "name": "Auriculares"
+      },
+      "brand": "SoundMax",
+      "price": 199.99,
+      "stock": 100,
+      "specifications": [
+        { "key": "Conectividad", "value": "Bluetooth 5.2" },
+        { "key": "Autonomía", "value": "30 horas" },
+        { "key": "Cancelación de ruido", "value": "Sí" }
+      ]
+    },
+    {
+      "sku": "PROD-004",
+      "name": "Tablet Pro 10.5",
+      "description": "Tablet con pantalla de 10.5 pulgadas y 256GB de almacenamiento.",
+      "image": "https://example.com/images/tablet-pro-10.5.jpg",
+      "category": {
+        "id": "CAT-004",
+        "name": "Tablets"
+      },
+      "brand": "TabTech",
+      "price": 599.99,
+      "stock": 75,
+      "specifications": [
+        { "key": "Pantalla", "value": "10.5 pulgadas Retina" },
+        { "key": "Almacenamiento", "value": "256GB" },
+        { "key": "Batería", "value": "7000mAh" }
+      ]
+    },
+    {
+      "sku": "PROD-005",
+      "name": "Smartwatch Fit 3",
+      "description": "Reloj inteligente con monitoreo de actividad física y notificaciones.",
+      "image": "https://example.com/images/smartwatch-fit-3.jpg",
+      "category": {
+        "id": "CAT-005",
+        "name": "Smartwatches"
+      },
+      "brand": "WatchBrand",
+      "price": 299.99,
+      "stock": 200,
+      "specifications": [
+        { "key": "Pantalla", "value": "1.4 pulgadas OLED" },
+        { "key": "Sensores", "value": "Ritmo cardíaco, GPS" },
+        { "key": "Resistencia al agua", "value": "50m" }
+      ]
+    },
+    {
+      "sku": "PROD-006",
+      "name": "Cámara Reflex D5600",
+      "description": "Cámara réflex digital con sensor de 24.2MP y grabación Full HD.",
+      "image": "https://example.com/images/camara-reflex-d5600.jpg",
+      "category": {
+        "id": "CAT-006",
+        "name": "Cámaras"
+      },
+      "brand": "PhotoPro",
+      "price": 799.99,
+      "stock": 40,
+      "specifications": [
+        { "key": "Sensor", "value": "24.2MP APS-C" },
+        { "key": "Pantalla", "value": "3.2 pulgadas abatible" },
+        { "key": "Video", "value": "Full HD 1080p" }
+      ]
+    },
+    {
+      "sku": "PROD-007",
+      "name": "Consola de Videojuegos GX5",
+      "description": "Consola de última generación con soporte para 4K y realidad virtual.",
+      "image": "https://example.com/images/consola-gx5.jpg",
+      "category": {
+        "id": "CAT-007",
+        "name": "Consolas"
+      },
+      "brand": "GameWorld",
+      "price": 499.99,
+      "stock": 60,
+      "specifications": [
+        { "key": "Resolución", "value": "Hasta 4K" },
+        { "key": "Almacenamiento", "value": "1TB" },
+        { "key": "Compatibilidad VR", "value": "Sí" }
+      ]
+    },
+    {
+      "sku": "PROD-008",
+      "name": "Televisor 55\" 4K UHD",
+      "description": "Televisor de 55 pulgadas con resolución 4K UHD y HDR10.",
+      "image": "https://example.com/images/televisor-55-4k-uhd.jpg",
+      "category": {
+        "id": "CAT-008",
+        "name": "Televisores"
+      },
+      "brand": "ViewPlus",
+      "price": 699.99,
+      "stock": 25,
+      "specifications": [
+        { "key": "Tamaño", "value": "55 pulgadas" },
+        { "key": "Resolución", "value": "4K UHD" },
+        { "key": "HDR", "value": "HDR10" }
+      ]
+    },
+    {
+      "sku": "PROD009",
+      "name": "Smartphone X200",
+      "description": "Un smartphone de última generación con pantalla OLED.",
+      "image": "https://example.com/images/smartphone-x200.jpg",
+      "category": {
+        "id": "CAT001",
+        "name": "Smartphones"
+      },
+      "brand": "TechBrand",
+      "price": 799.99,
+      "stock": 25,
+      "specifications": [
+        { "name": "Pantalla", "value": "6.5 pulgadas OLED" },
+        { "name": "Cámara", "value": "Triple 50MP + 12MP + 10MP" },
+        { "name": "Batería", "value": "4500mAh" }
+      ]
+    },
+    {
+      "sku": "PROD010",
+      "name": "Laptop Pro 15",
+      "description": "Potente laptop para profesionales con procesador de última generación.",
+      "image": "https://example.com/images/laptop-pro-15.jpg",
+      "category": {
+        "id": "CAT002",
+        "name": "Laptops"
+      },
+      "brand": "PowerTech",
+      "price": 1299.99,
+      "stock": 10,
+      "specifications": [
+        { "name": "Procesador", "value": "Intel Core i9" },
+        { "name": "RAM", "value": "32GB DDR5" },
+        { "name": "Almacenamiento", "value": "1TB SSD" }
+      ]
+    },
+    {
+      "sku": "PROD011",
+      "name": "Auriculares Wireless Z50",
+      "description": "Auriculares inalámbricos con cancelación de ruido y sonido envolvente.",
+      "image": "https://example.com/images/auriculares-z50.jpg",
+      "category": {
+        "id": "CAT003",
+        "name": "Auriculares"
+      },
+      "brand": "SoundMax",
+      "price": 199.99,
+      "stock": 50,
+      "specifications": [
+        { "name": "Tipo", "value": "Inalámbrico" },
+        { "name": "Duración de batería", "value": "30 horas" },
+        { "name": "Cancelación de ruido", "value": "Activa" }
+      ]
+    },
+    {
+      "sku": "PROD012",
+      "name": "Tablet UltraTab 12",
+      "description": "Tablet con pantalla de 12 pulgadas y procesador de alto rendimiento.",
+      "image": "https://example.com/images/tablet-ultratab-12.jpg",
+      "category": {
+        "id": "CAT004",
+        "name": "Tablets"
+      },
+      "brand": "MegaTech",
+      "price": 599.99,
+      "stock": 15,
+      "specifications": [
+        { "name": "Pantalla", "value": "12 pulgadas LCD" },
+        { "name": "Almacenamiento", "value": "256GB SSD" },
+        { "name": "Batería", "value": "8000mAh" }
+      ]
+    },
+    {
+      "sku": "PROD013",
+      "name": "Monitor 4K VisionX",
+      "description": "Monitor 4K de 27 pulgadas con tecnología HDR.",
+      "image": "https://example.com/images/monitor-visionx.jpg",
+      "category": {
+        "id": "CAT005",
+        "name": "Monitores"
+      },
+      "brand": "ViewPro",
+      "price": 349.99,
+      "stock": 20,
+      "specifications": [
+        { "name": "Resolución", "value": "4K UHD" },
+        { "name": "Tamaño", "value": "27 pulgadas" },
+        { "name": "Tasa de refresco", "value": "144Hz" }
+      ]
+    },
+    {
+      "sku": "PROD014",
+      "name": "Teclado Mecánico RGB K70",
+      "description": "Teclado mecánico con iluminación RGB y switches personalizables.",
+      "image": "https://example.com/images/teclado-k70.jpg",
+      "category": {
+        "id": "CAT006",
+        "name": "Periféricos"
+      },
+      "brand": "KeyMaster",
+      "price": 129.99,
+      "stock": 40,
+      "specifications": [
+        { "name": "Tipo", "value": "Mecánico" },
+        { "name": "Iluminación", "value": "RGB personalizable" },
+        { "name": "Conectividad", "value": "USB-C" }
+      ]
+    },
+    {
+      "sku": "PROD015",
+      "name": "Mouse Gaming GX500",
+      "description": "Mouse ergonómico para gaming con sensor de alta precisión.",
+      "image": "https://example.com/images/mouse-gx500.jpg",
+      "category": {
+        "id": "CAT006",
+        "name": "Periféricos"
+      },
+      "brand": "KeyMaster",
+      "price": 89.99,
+      "stock": 35,
+      "specifications": [
+        { "name": "DPI", "value": "16000" },
+        { "name": "Botones programables", "value": "8" },
+        { "name": "Iluminación", "value": "RGB" }
+      ]
+    },
+    {
+      "sku": "PROD016",
+      "name": "Smartwatch FitX",
+      "description": "Reloj inteligente con monitoreo de actividad y notificaciones.",
+      "image": "https://example.com/images/smartwatch-fitx.jpg",
+      "category": {
+        "id": "CAT007",
+        "name": "Wearables"
+      },
+      "brand": "TechWear",
+      "price": 179.99,
+      "stock": 50,
+      "specifications": [
+        { "name": "Pantalla", "value": "AMOLED 1.4 pulgadas" },
+        { "name": "Batería", "value": "10 días" },
+        { "name": "Resistencia al agua", "value": "IP68" }
+      ]
+    }
+  ]
+}

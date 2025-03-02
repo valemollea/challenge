@@ -1,39 +1,51 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import {
+  Box,
   Card,
-  CardActions,
   CardContent,
   CardMedia,
   Button,
   Typography,
 } from "@mui/material";
-import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 
 import type { ProductType } from "@/types/product";
 
 export const ProductItem = ({
   sku,
+  name,
+  image,
   category,
   brand,
   price,
-}: Pick<ProductType, "sku" | "category" | "brand" | "price">) => (
-  <Card sx={{ maxWidth: 345 }}>
+}: Pick<
+  ProductType,
+  "sku" | "name" | "image" | "category" | "brand" | "price"
+>) => (
+  <Card sx={{ maxWidth: 345, display: "flex", flexDirection: "column" }}>
     <CardMedia
       sx={{
-        height: 160,
         background: "#bad4e3",
         display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        objectFit: "cover",
       }}
     >
-      <ShoppingBagIcon sx={{ color: "white", fontSize: 50 }} />
+      <Image src={image} alt={name} width={600} height={400} />
     </CardMedia>
-    <CardContent>
-      <Typography gutterBottom variant="h5" component="div">
+    <CardContent
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        flexGrow: 1,
+      }}
+    >
+      <Typography gutterBottom variant="body2" component="div">
         {sku}
+      </Typography>
+      <Typography gutterBottom variant="h5" component="div">
+        {name}
       </Typography>
       <Typography variant="body2" sx={{ color: "text.secondary" }}>
         {`Categoria: ${category.name}`}
@@ -45,10 +57,18 @@ export const ProductItem = ({
         {`Precio: $${price}`}
       </Typography>
     </CardContent>
-    <CardActions>
+    <Box
+      sx={{
+        p: 2,
+        m: "auto 0 0 auto",
+        display: "flex",
+        alignItems: "flex-end",
+        justifyContent: "flex-end",
+      }}
+    >
       <Link href={`/products/${sku}`}>
         <Button size="small">Ver Detalle</Button>
       </Link>
-    </CardActions>
+    </Box>
   </Card>
 );

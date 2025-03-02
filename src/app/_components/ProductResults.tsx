@@ -19,8 +19,6 @@ export const ProductResults = (initialPageParam: SearchProductPayload) => {
     refetch();
   }, [initialPageParam, refetch]);
 
-  console.log({ data, isFetching });
-
   return (
     <>
       {isFetching && (

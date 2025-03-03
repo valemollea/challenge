@@ -7,7 +7,7 @@ interface ProductProps {
 }
 
 export default async function Product({ params }: ProductProps) {
-  const { sku } = params;
+  const { sku } = await params;
 
   let product;
   try {

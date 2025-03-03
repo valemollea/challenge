@@ -10,10 +10,7 @@ import {
 
 import { DEFAULT_SEARCH_PARAMS, PRODUCT_QUERY_KEY_PREFIX } from "./constants";
 
-import type {
-  GetProductsJSONServerResponse,
-  SearchProductPayload,
-} from "@/types/product";
+import type { ProductType, SearchProductPayload } from "@/types/product";
 
 const productsQueryKey = [PRODUCT_QUERY_KEY_PREFIX, "list"] as const;
 type ProductsQueryKeyType = typeof productsQueryKey;
@@ -29,7 +26,7 @@ export const fetchProducts = async ({
       (key: keyof Omit<SearchProductPayload, "search">) => {
         if (pageParams[key] != null) {
           // transformations required to use json server parameters
-          const currentKey = key === "size" ? "_per_page" : `_${key}`;
+          const currentKey = key === "size" ? "_limit" : `_${key}`;
           const currentValue =
             key === "page" ? pageParams[key] + 1 : pageParams[key];
 
@@ -41,8 +38,11 @@ export const fetchProducts = async ({
 
   // required to use json server parameters
   if (search != null && search !== "") {
-    endpointUrl.searchParams.append("name_like", search);
-    endpointUrl.searchParams.append("sku", search);
+    if (search.startsWith("PROD-")) {
+      endpointUrl.searchParams.append("sku", search);
+    } else {
+      endpointUrl.searchParams.append("name_like", search);
+    }
   }
 
   const response = await fetch(endpointUrl);
@@ -52,25 +52,25 @@ export const fetchProducts = async ({
 
 const getNextPageParam: GetNextPageParamFunction<
   SearchProductPayload,
-  GetProductsJSONServerResponse
+  ProductType[]
 > = (lastPage, _, lastPageParam) =>
-  lastPage.next
+  lastPage.length === lastPageParam?.size
     ? {
-        page: lastPage.next - 1,
+        page: (lastPageParam?.page ?? 0) + 1,
         size: lastPageParam?.size,
         search: lastPageParam?.search,
       }
     : undefined;
 
-export const useSearchProducts = <TData = GetProductsJSONServerResponse>({
+export const useSearchProducts = <TData = ProductType[]>({
   search,
   ...options
 }: { search: SearchProductPayload["search"] } & Omit<
   UseInfiniteQueryOptions<
-    GetProductsJSONServerResponse,
+    ProductType[],
     Error,
     InfiniteData<TData, SearchProductPayload>,
-    GetProductsJSONServerResponse,
+    ProductType[],
     ProductsQueryKeyType,
     SearchProductPayload
   >,
@@ -90,11 +90,11 @@ export const useSearchProducts = <TData = GetProductsJSONServerResponse>({
     getNextPageParam,
   });
 
-useSearchProducts.prefectQuery = <TData = GetProductsJSONServerResponse>(
+useSearchProducts.prefectQuery = <TData = ProductType[]>(
   queryClient: QueryClient,
   options: Omit<
     FetchInfiniteQueryOptions<
-      GetProductsJSONServerResponse,
+      ProductType[],
       Error,
       TData,
       ProductsQueryKeyType,

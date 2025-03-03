@@ -10,14 +10,28 @@ import type { SearchProductPayload } from "@/types/product";
 import { ProductItem } from "./ProductItem";
 
 export const ProductResults = (initialPageParam: SearchProductPayload) => {
-  const { data, refetch, fetchNextPage, hasNextPage } = useSearchProducts({
-    initialPageParam,
-    search: initialPageParam.search,
-  });
+  const { data, refetch, fetchNextPage, hasNextPage, isError } =
+    useSearchProducts({
+      initialPageParam,
+      search: initialPageParam.search,
+    });
 
   useEffect(() => {
     refetch();
   }, [initialPageParam, refetch]);
+
+  if (isError) {
+    return (
+      <Typography
+        variant="h5"
+        sx={{
+          gridColumn: "1/6",
+        }}
+      >
+        Algo salió mal.
+      </Typography>
+    );
+  }
 
   return (
     <>

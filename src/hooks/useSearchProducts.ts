@@ -18,7 +18,7 @@ type ProductsQueryKeyType = typeof productsQueryKey;
 export const fetchProducts = async ({
   pageParam: { search, ...pageParams } = DEFAULT_SEARCH_PARAMS,
 }: QueryFunctionContext<ProductsQueryKeyType, SearchProductPayload>) => {
-  const endpointUrl = new URL("http://localhost:4000/products");
+  const endpointUrl = new URL(`${process.env.API_BASE_URL}/products`);
 
   if (pageParams) {
     Object.keys(pageParams).forEach(
